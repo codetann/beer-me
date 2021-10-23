@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { Search } from "./components";
-import { VStack } from "@chakra-ui/react";
 import { useLocation } from "./hooks";
+import { VStack } from "@chakra-ui/react";
 
 function App() {
   const [search, setSearch] = useState("");
   const { location, getLocation } = useLocation();
 
   return (
-    <VStack w="100%" minH="100vh" maxH="100vh">
+    <VStack w="100%" minH="100vh">
       <Search
         value={search}
         setValue={setSearch}

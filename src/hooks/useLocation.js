@@ -6,7 +6,7 @@ export const useLocation = () => {
   useEffect(() => {
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition((position) => {
-        setLocation(position.coords);
+        setLocation([position.coords.latitude, position.coords.longitude]);
       });
     }
   }, []);
@@ -17,7 +17,7 @@ export const useLocation = () => {
     } else {
       if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition((position) => {
-          setLocation(position.coords);
+          setLocation([position.coords.latitude, position.coords.longitude]);
         });
       }
     }
