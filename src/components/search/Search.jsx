@@ -1,8 +1,19 @@
+/**
+ * <Search />
+ *
+ * The search component is used to search for breweries based on a query.
+ *
+ * The getLocation function is used to get the current location of the user.
+ *
+ * Value, onChange, and setValue are passed from App.js and handles the search value.
+ *
+ */
+
 import React from "react";
 import { BsFillGeoAltFill, BsX } from "react-icons/bs";
 import { HStack, Input, IconButton, Divider } from "@chakra-ui/react";
 
-export const Search = ({ value, onChange, setValue }) => {
+export const Search = ({ value, onChange, setValue, getLocation }) => {
   return (
     <form>
       <HStack
@@ -26,6 +37,8 @@ export const Search = ({ value, onChange, setValue }) => {
         <IconButton
           bg="none"
           icon={<BsX />}
+          color={"#D7DAEC"}
+          fontSize={"xl"}
           onClick={() => setValue("")}
           visibility={value ? "visible" : "hidden"}
         />
@@ -34,6 +47,7 @@ export const Search = ({ value, onChange, setValue }) => {
           bg="none"
           rounded="xl"
           color="#717AA1"
+          onClick={getLocation}
           icon={<BsFillGeoAltFill />}
         />
       </HStack>
