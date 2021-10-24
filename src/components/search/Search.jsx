@@ -19,8 +19,12 @@ export const Search = ({ value, onChange, setValue, getLocation }) => {
       <HStack
         w="100%"
         h="3rem"
+        left="0"
+        maxW="xl"
+        zIndex={10}
         spacing="0"
         rounded="xl"
+        pos="absolute"
         bg="#F6F8FF"
         transition="all 0.2s"
         _focusWithin={{ ring: "3px", ringColor: "purple.100" }}

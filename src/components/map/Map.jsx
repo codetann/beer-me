@@ -12,7 +12,7 @@ export const Map = ({ position }) => {
     <MapContainer
       zoom={13}
       center={position}
-      style={{ height: "100vh", width: "100vw" }}
+      style={{ height: "100vh", width: "100vw", zIndex: 5 }}
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
