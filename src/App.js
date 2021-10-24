@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Search } from "./components";
+import { Search, Map } from "./components";
 import { useLocation } from "./hooks";
 import { VStack } from "@chakra-ui/react";
 
@@ -15,6 +15,7 @@ function App() {
         getLocation={getLocation}
         onChange={(e) => setSearch(e.target.value)}
       />
+      <Map position={location} />
     </VStack>
   );
 }
