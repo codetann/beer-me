@@ -1,7 +1,7 @@
 // create a hook to use localStorage
 import { useRef, useState, useEffect } from "react";
 
-function useLocalStorage(key, initialValue) {
+export function useLocalStorage(key, initialValue) {
   // get the initial value
   const initialValueRef = useRef(initialValue);
   // set the initial value
