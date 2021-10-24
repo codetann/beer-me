@@ -3,10 +3,11 @@
  */
 
 import React from "react";
+import { Spinner } from "@chakra-ui/react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
 export const Map = ({ position }) => {
-  if (!position) return <p>Loading...</p>;
+  if (!position) return <Spinner size={"xl"} />;
   return (
     <MapContainer
       zoom={13}
