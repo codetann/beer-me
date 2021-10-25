@@ -25,7 +25,8 @@ export const Search = ({ value, onChange, setValue, getLocation }) => {
         spacing="0"
         rounded="xl"
         pos="absolute"
-        bg="#F6F8FF"
+        // bg="#F6F8FF"
+        bg="white"
         transition="all 0.2s"
         _focusWithin={{ ring: "3px", ringColor: "purple.100" }}
       >
